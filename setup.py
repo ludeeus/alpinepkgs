@@ -10,7 +10,7 @@ setuptools.setup(
     author_email="ludeeus@gmail.com",
     description="",
     long_description=LONG,
-    install_requires=['requests'],
+    install_requires=['requests', 'click'],
     long_description_content_type="text/markdown",
     url="https://github.com/ludeeus/alpinepkgs",
     packages=setuptools.find_packages(),

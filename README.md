@@ -12,11 +12,18 @@ pip install alpinepkgs
 ### Example
 
 ```python
-from alpinepkgs.packages import Packages
+from alpinepkgs.packages import get_package
+print(get_package('nginx'))
 
-pkgs = Packages('nginx', 'v3.8')
-print(pkgs.get_package())
+> {'x86_64': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'armhf': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 's390x': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'x86': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'aarch64': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'ppc64le': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'package': 'nginx', 'branch': 'v3.8'}
 ```
+
+### CLI Example
+
+```bash
+alpinepkgs --package nginx
+```
+
 
 ***
 
