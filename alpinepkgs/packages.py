@@ -26,6 +26,8 @@ def get_package(package=None, branch=BRANCHES[-2]):
 
     data = {'package': package, 'branch': branch}
 
+    versions = []
+
     if '+' in package:
         package = package.replace('+', '%2B')
 
@@ -50,6 +52,9 @@ def get_package(package=None, branch=BRANCHES[-2]):
                     version = version.split('>')[2]
                     version = version.split('<')[0]
 
+                if version not in versions:
+                    versions.append(version)
+
                 date = architecture.split('<td class="bdate">')[1]
                 date = date.split('</td>')[0]
                 date = date.split(' ')[0]
@@ -72,4 +77,7 @@ def get_package(package=None, branch=BRANCHES[-2]):
                               'url': url}
             except IndexError:
                 _LOGGER.error("Package %s not found on %s", package, branch)
+
+    data['versions'] = versions
+
     return data
