@@ -40,33 +40,36 @@ def get_package(package=None, branch=BRANCHES[-2]):
 
     for architecture in packages:
         if architecture.replace(' ', '') != '<tr>':
-            arch = architecture.split('<td class="arch">')[1]
-            arch = arch.split('</td>')[0]
+            try:
+                arch = architecture.split('<td class="arch">')[1]
+                arch = arch.split('</td>')[0]
 
-            version = architecture.split('<td class="version">')[1]
-            version = version.split('</td>')[0]
-            if branch == 'edge':
-                version = version.split('>')[2]
-                version = version.split('<')[0]
+                version = architecture.split('<td class="version">')[1]
+                version = version.split('</td>')[0]
+                if branch == 'edge':
+                    version = version.split('>')[2]
+                    version = version.split('<')[0]
 
-            date = architecture.split('<td class="bdate">')[1]
-            date = date.split('</td>')[0]
-            date = date.split(' ')[0]
+                date = architecture.split('<td class="bdate">')[1]
+                date = date.split('</td>')[0]
+                date = date.split(' ')[0]
 
-            licence = architecture.split('<td class="license">')[1]
-            licence = licence.split('</td>')[0]
+                licence = architecture.split('<td class="license">')[1]
+                licence = licence.split('</td>')[0]
 
-            maintainer = architecture.split('<td class="maintainer">')[1]
-            maintainer = maintainer.split('</td>')[0]
+                maintainer = architecture.split('<td class="maintainer">')[1]
+                maintainer = maintainer.split('</td>')[0]
 
-            url = architecture.split('<td class="url">')[1]
-            url = url.split('</td>')[0]
-            url = url.split('"')[1]
-            url = url.replace('&#x2F;', '/')
+                url = architecture.split('<td class="url">')[1]
+                url = url.split('</td>')[0]
+                url = url.split('"')[1]
+                url = url.replace('&#x2F;', '/')
 
-            data[arch] = {'version': version,
-                          'date': date,
-                          'licence': licence,
-                          'maintainer': maintainer,
-                          'url': url}
+                data[arch] = {'version': version,
+                              'date': date,
+                              'licence': licence,
+                              'maintainer': maintainer,
+                              'url': url}
+            except IndexError:
+                _LOGGER.error("Package %s not found on %s", package, branch)
     return data
