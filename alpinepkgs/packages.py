@@ -43,7 +43,6 @@ def get_package(package=None, branch=BRANCHES[-2]):
                 version = version.split('>')[2]
                 version = version.split('<')[0]
 
-
             date = architecture.split('<td class="bdate">')[1]
             date = date.split('</td>')[0]
             date = date.split(' ')[0]
@@ -63,5 +62,5 @@ def get_package(package=None, branch=BRANCHES[-2]):
                           'date': date,
                           'licence': licence,
                           'maintainer': maintainer,
-                          'url':url}
+                          'url': url}
     return data
