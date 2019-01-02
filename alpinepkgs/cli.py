@@ -11,4 +11,5 @@ def cli(package, branch):
     from alpinepkgs.packages import get_package
     print(json.dumps(get_package(package, branch), indent=4, sort_keys=True))
 
+
 cli()  # pylint: disable=E1120

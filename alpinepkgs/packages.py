@@ -17,6 +17,9 @@ def get_package(package=None, branch=BRANCHES[-2]):
         _LOGGER.error("You need to specify a package!")
         return
 
+    if branch is None:
+        branch = BRANCHES[-2]
+
     if branch not in BRANCHES:
         _LOGGER.error("Only %s are supported as the branch!", BRANCHES)
         return
