@@ -24,9 +24,12 @@ def get_package(package=None, branch=BRANCHES[-2]):
         _LOGGER.error("Only %s are supported as the branch!", BRANCHES)
         return None
 
-    url = BASE_URL.format(package, branch)
-
     data = {'package': package, 'branch': branch}
+
+    if '+' in package:
+        package = package.replace('+', '%2B')
+
+    url = BASE_URL.format(package, branch)
 
     get = requests.get(url)
 
