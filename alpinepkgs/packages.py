@@ -15,14 +15,14 @@ def get_package(package=None, branch=BRANCHES[-2]):
     """Get package information."""
     if package is None:
         _LOGGER.error("You need to specify a package!")
-        return
+        return None
 
     if branch is None:
         branch = BRANCHES[-2]
 
     if branch not in BRANCHES:
         _LOGGER.error("Only %s are supported as the branch!", BRANCHES)
-        return
+        return None
 
     url = BASE_URL.format(package, branch)
 
