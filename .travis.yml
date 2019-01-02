@@ -2,7 +2,7 @@ language: python
 stages:
   - linting
   - install
-#  - deploy
+  - deploy
 
 jobs:
   include:
@@ -40,7 +40,7 @@ jobs:
       python: "3.6"
       script:
         - python setup.py install
-        - python -c"from alpinepkgs.api import API"
+        - python -c"from alpinepkgs.packages import get_package"
 
     # Deploy to PyPi if all tests pass and change was done on master.
     - stage: deploy
