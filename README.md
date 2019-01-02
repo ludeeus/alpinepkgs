@@ -21,7 +21,53 @@ print(get_package('nginx'))
 ### CLI Example
 
 ```bash
-alpinepkgs --package nginx
+alpinepkgs --package nginx --branch v3.8
+{
+    "aarch64": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    },
+    "armhf": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    },
+    "branch": "v3.8",
+    "package": "nginx",
+    "ppc64le": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    },
+    "s390x": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    },
+    "x86": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    },
+    "x86_64": {
+        "date": "2018-12-11",
+        "licence": "BSD-2-Clause",
+        "maintainer": "Jakub Jirutka",
+        "url": "http://www.nginx.org/en",
+        "version": "1.14.2-r0"
+    }
+}
 ```
 
 
