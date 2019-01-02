@@ -12,9 +12,9 @@ pip install alpinepkgs
 ### Example
 
 ```python
-from aplinepkgs.packages import Packages
+from alpinepkgs.packages import Packages
 
-pgks = Packages('nginx', 'v3.8')
+pkgs = Packages('nginx', 'v3.8')
 print(pkgs.get_package())
 ```
 

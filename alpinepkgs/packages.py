@@ -19,7 +19,7 @@ class Packages(object):
         self._package = package
         self._branch = branch
 
-    async def get_package(self):
+    def get_package(self):
         """Get package information."""
         if self._package is None:
             _LOGGER.error("You need to specify a package!")
