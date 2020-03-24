@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     LONG = fh.read()
 setuptools.setup(
     name="alpinepkgs",
-    version="1.0.5",
+    version="1.1.0",
     author="Joakim Sorensen",
     author_email="ludeeus@gmail.com",
     description="",
