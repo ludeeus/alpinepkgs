@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="alpinepkgs",
-    version="1.1.6",
+    version="2.0.0",
     author="Joakim Sorensen",
     author_email="ludeeus@gmail.com",
     description="",
