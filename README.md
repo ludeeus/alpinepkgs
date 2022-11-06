@@ -13,8 +13,8 @@ pip install alpinepkgs
 
 ```python
 from alpinepkgs.packages import get_package
-print(get_package('nginx'))
+print(get_package('python3'))
 
-> {'x86_64': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'armhf': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 's390x': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'x86': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'aarch64': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'ppc64le': {'date': '2018-12-11', 'licence': 'BSD-2-Clause', 'url': 'http://www.nginx.org/en', 'version': '1.14.2-r0', 'maintainer': 'Jakub Jirutka'}, 'package': 'nginx', 'branch': 'v3.8'}
+> {'package': 'python3', 'branch': 'v3.16', 'x86_64': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'x86': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'aarch64': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'armhf': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 's390x': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'armv7': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'ppc64le': {'version': '3.10.5-r0', 'date': '2022-07-25', 'licence': 'PSF-2.0', 'maintainer': 'Natanael Copa', 'url': 'https://www.python.org/'}, 'versions': ['3.10.5-r0']}
 ```
 
