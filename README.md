@@ -1,7 +1,8 @@
 # alpinepkgs
 
 _Give you information about packages from pkgs.alpinelinux.org._
-**NB!: This package uses web scraping to gather the information.**
+
+**NOTE!: This package uses web scraping to gather the information.**
 
 ## Install
 
